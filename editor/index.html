@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inside ISA Email Editor</title>
+    <link type="text/css" rel="stylesheet" href="./site.css">
+  </head>
+  <body>
+    <h1>Inside ISA Email Editor</h1>
+    <p>
+      Use this editor to create the HTML content for the monthly Inside ISA
+      emails sent out by the Program Advisor team.
+    </p>
+
+    <div id="finalContentArea" class="final-content">
+      <h2>Finished Content</h2>
+      <button class="final-content__btn final-content__preview-btn">Preview</button>
+      <button class="final-content__btn final-content__code-btn">Copy Code</button>
+
+      <div class="final-content__preview-ctn hide">
+        <textarea class="final-content__code-area hide"></textarea>
+        <div class="final-content__preview-area hide"></div>
+      </div>
+    </div>
+
+    <form id='creationForm' action="#">
+      <label for="intro">Intro Paragraph:</label>
+      <textarea rows=5 name="intro" id="intro" placeholder="This will be displayed at the top of the email. You can use the same data tags as in the HTML email editor (ie. [person_first_name])"></textarea>
+
+      <!-- Section Template
+      <fieldset class="email-section">
+        <legend>Section 1</legend>
+        <label for="section1_link_url">Link URL</label>
+        <input type="text" name="section1_link_url" placeholder="link to content (ie. blog post, etc)">
+
+        <label for="section1_type">Type</label>
+        <input type="text" name="section1_type" placeholder="type of section (ie. 'Program Highlight')">
+
+        <label for="section1_title">Title</label>
+        <input type="text" name="section1_title" placeholder="title of section">
+
+        <label for="section1_img">Image URL</label>
+        <input type="text" name="section1_img" placeholder="url of image on ISA database (use HTML email editor)">
+
+        <label for="section1_blurb">Blurb</label>
+        <textarea name="section1_blurb" placeholder="preview of what the user will see"></textarea>
+
+      </fieldset>
+      -->
+      <input id='addSectionBtn' type="button" value="Add Section">
+    </form>
+
+    <script type="text/javascript" src="./site.js"></script>
+  </body>
+</html>

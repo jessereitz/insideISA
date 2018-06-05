@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, label {
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 35rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.05);
+  padding: 0 1rem;
+  overflow: auto;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  margin: 1em 0;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin: 1em 0 0.1em 0;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.25em 0.3rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5em;
+}
+
+input[type=submit],
+input[type=button],
+button {
+  padding: 0.5em 1rem;
+  border: 2px solid #888;
+  background: none;
+  transition: background-color 0.2s, color 0.2s;
+  outline: none;
+  -webkit-outline:none;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover {
+  background: #bbb;
+  color: #fff;
+}
+
+.final-content {
+  max-width: 675px;
+  margin: 2em auto;
+  padding: 1em 1rem;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.05);
+}
+
+.final-content__btn {
+  box-sizing: content-box;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -4px;
+}
+
+.active {
+  z-index: 3;
+  background: #99CC8B;
+  color: #fff;
+  border-bottom: 0px;
+}
+
+.final-content__preview-ctn {
+  position: relative;
+  z-index: 2;
+  padding: 1em 1rem;
+  border: 2px solid #888;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.final-content__code-area {
+  margin-bottom: 0;
+}
+
+.hide {
+  display: none !important;
+}
