@@ -28,6 +28,13 @@ const EMAIL_FOOTER = `
     </a>
   </td>
 </tr>
+<tr>
+  <td style="padding: 0; padding-bottom: 20px;">
+    <a href="https://studiesabroad.com/applyOnline.php" style="display: block; border: 1px solid #ddd; padding: 20px; text-align: center; font-family: 'Helvetica', sans-serif; font-size: 24px; color: white; background: rgb(0,37,61); text-decoration: none;">
+      Apply Now
+    </a>
+  </td>
+</tr>
 </tbody>
 </table>
 
@@ -67,7 +74,7 @@ function addLineBreaks(text) {
   return text.replace(/\r?\n/g, '<br />');
 }
 
-function HTMLInput(type, title, sectionName, placeholder, value) {
+function HTMLInput(type, title, sectionName, placeholder, value, defaultVal) {
   /* Object that contains all necessary data to create, render, and get data
   from an HTML Input element.
 
@@ -157,6 +164,10 @@ function Section(index) {
   this.html.append(this.blurbInput.label);
   this.html.append(this.blurbInput.input);
 
+  this.moreInfo = new HTMLInput('text', 'More Info Tagline', this.sectionName, "More", "More");
+  this.html.append(this.moreInfo.label);
+  this.html.append(this.moreInfo.input);
+
   if (this.num !== 1) {
     this.deleteBtn = new HTMLInput('button', 'Delete Section', this.sectionName);
     this.html.append(this.deleteBtn.input);
@@ -183,7 +194,7 @@ function Section(index) {
           ${addLineBreaks(this.blurbInput.value())}
         </p>
 
-          <p style="padding-left: 20px; padding-bottom: 20px; color: blue;">More &rarr;</p>
+          <p style="padding-left: 20px; padding-bottom: 20px; color: blue;">${this.moreInfo.value()} &rarr;</p>
         </a>
       </td>
     </tr>
